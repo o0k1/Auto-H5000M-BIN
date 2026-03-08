@@ -201,6 +201,14 @@ jobs:
             cd ..
           fi
 
+          # 修复 Rust 构建错误问题 # https://github.com/openwrt/packages/pull/27487 https://github.com/openwrt/openwrt/pull/20742
+          cd $SOURCE_DIR
+          if [ -f "$GITHUB_WORKSPACE/fix/patch-kernel.sh" ]; then
+            rm -rf ./scripts/patch-kernel.sh
+            cp "$GITHUB_WORKSPACE/fix/patch-kernel.sh" ./scripts/patch-kernel.sh
+            chmod +x ./scripts/patch-kernel.sh
+          fi
+
           # 设置 feeds
           cd $SOURCE_DIR
           if [ -f "$GITHUB_WORKSPACE/feeds.conf.default" ]; then
