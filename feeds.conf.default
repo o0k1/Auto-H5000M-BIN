@@ -9,3 +9,4 @@ src-git telephony https://github.com/openwrt/telephony.git;openwrt-24.10
 # 可选第三方源
 src-git qmodem https://github.com/FUjr/QModem.git;main
 src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main
+src-git helloworld https://github.com/fw876/helloworld.git;master
