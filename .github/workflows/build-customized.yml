@@ -208,6 +208,7 @@ jobs:
             cp "$GITHUB_WORKSPACE/fix/patch-kernel.sh" ./scripts/patch-kernel.sh
             chmod +x ./scripts/patch-kernel.sh
           fi
+          cd ..
 
           # 设置 feeds
           cd $SOURCE_DIR
